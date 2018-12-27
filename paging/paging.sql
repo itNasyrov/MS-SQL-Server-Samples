@@ -11,7 +11,7 @@ begin
 		set @pages = 1;
 
 
-  SELECT
+  SELECT top (@pages * @rows)
 		((ROW_NUMBER() over (ORDER BY object_id) -1) / @rows)+1 as pages,   -- page number
 		ROW_NUMBER() over (ORDER BY object_id) as num,					              -- record number
 		*
@@ -19,7 +19,7 @@ begin
 	FROM sys.objects
 
 	declare @rows_count int
-	select @rows_count = count(*) from #temp
+	select @rows_count = count(*) from sys.objects
 
 	declare @page_count int
 	set @page_count = @rows_count / @rows

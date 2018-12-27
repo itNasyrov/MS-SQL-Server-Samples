@@ -1,4 +1,4 @@
-## information
+## Information
 
 the stored procedure is designed to separate data for paginated data output,
 before MSSQL 2012, use the procedure from the file [paging.sql](https://github.com/itNasyrov/SQL-Server-Samples/blob/master/paging/paging.sql)
@@ -15,7 +15,7 @@ starting with MSSQL 2012 and higher, use the procedure from the file [offset2012
   
 **page_count** - number of country
   
-## using stored procedure
+## Using stored procedure
   
 default 1 page 100 records
   
@@ -28,9 +28,13 @@ get 5 page of 50 entries
 ```sql 
 exec getPaging 5, 50 
 ```
+
+## Performance
+
+![performance](https://i.snag.gy/zDBZYW.jpg)
   
 
-## информация
+## Информация
 
 хранимая процедура предназначена для разделения данных для постраничного вывода данных,
 до MSSQL 2012 использовать процедуру из файла [paging.sql](https://github.com/itNasyrov/SQL-Server-Samples/blob/master/paging/paging.sql)
@@ -46,7 +50,7 @@ exec getPaging 5, 50
 
 **page_count** - количество страниц
 
-## использование хранимой процедуры
+## Использование хранимой процедуры
 
 по умолчанию 1 станица 100 записей
 ```sql 
@@ -57,3 +61,7 @@ exec getPaging
 ```sql 
 exec getPaging 5, 50 
 ```
+
+## Производительность
+
+![производительность](https://i.snag.gy/zDBZYW.jpg)
